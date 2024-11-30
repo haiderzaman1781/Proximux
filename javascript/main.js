@@ -19,3 +19,28 @@ navLinks.forEach(link => {
     link.classList.remove("active");
   });
 });
+
+
+window.addEventListener("load", () => {
+
+  const navbar = document.getElementById("main-nav");
+
+  // Add the initial transition styles
+  navbar.style.transition = "all 0.3s ease"; // Transition for width, background-color, and backdrop-filter
+
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+
+    if (scrollY > 650) {
+      navbar.style.width = "100%";
+      navbar.style.background = "linear-gradient(to bottom, #6b46c1, #3b82f6);";
+      navbar.style.backdropFilter = "blur(10px)";
+    } else {
+      navbar.style.width = "78%";
+      navbar.style.background = "transparent";
+      navbar.style.backdropFilter = "none";
+    }
+  });
+
+});
+

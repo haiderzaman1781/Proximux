@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 
     <title>Document</title>
     <style>
@@ -17,20 +19,13 @@
             overflow-x: hidden;
             padding: 0%;
             margin: 0%;
-
-        }
-        .background{
-            position: absolute;
-            top: 0px;
-            width:100%;
-            height: 100%;
-            z-index: -100;
             background-image: url(/assest/image/bck.jpg);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
             backdrop-filter: blur(8px);
+
         }
         .links{
             backdrop-filter: blur(10px);
@@ -42,11 +37,11 @@
 </head>
 
 <body>
-    <div class="background"></div>
-    
     <!-- NAVBAR -->
-    <nav class=" text-white lg:w-[78%] text-start ">
-        <div class="flex -center justify-start lg:justify-start">
+    <nav class="text-white lg:w-[78%]  sticky top-0  z-10 "
+    id="main-nav"
+    >
+        <div class="flex justify-center lg:justify-start">
             <!-- Logo -->
             <div class="text-2xl font-bold w-1/4 text-center bg-black py-3 rounded-br-2xl ">
                 BUILD<span class="text-purple-500">→</span>
@@ -125,12 +120,138 @@
             </button>
         </div>
     </div>
+     
 
-    <div class="p-[1000px]"></div>
-    
 
-    
-    
+    <div>
+        <section class="text-center py-10">
+            <h1 class="text-[35px] font-bold hover:text-[#94a883] cursor-pointer font-playwrite">Skill's</h1>
+            <div class="w-full flex justify-center py-5 text-neutral-500">
+                <div class="w-[80%]">
+                    <h2 class="text-[30px] font-bold">
+                        Front-End Skill <i class="fas fa-solid fa-laptop-code hover:text-blue-500 cursor-pointer"></i>
+                    </h2>
+                    <p class="text-neutral-600">
+                        Here's the list of some my favourite <span class="text-blue-500">Front-end</span> Languages
+                    </p>
+        
+                    <div class="flex flex-wrap gap-5 justify-evenly mt-10">
+                        <!-- HTML5 -->
+                        <div class="relative skill-card overflow-hidden p-1 rounded-lg mb-10 hover:scale-105">
+                            <div class="bg-gray-100 shadow-md rounded-lg px-10 py-3" data-aos="fade-up">
+                                <div class="icon text-center mb-5">
+                                    <i
+                                        class="fas fa-brands fa-html5 text-orange-500 text-[40px] bg-white p-5 rounded-full border shadow-md"></i>
+                                </div>
+                                <div class="description">
+                                    <h3 class="text-center font-bold text-[20px]">HTML5</h3>
+                                    <p class="text-indent">Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- JavaScript -->
+                        <div class="relative skill-card overflow-hidden p-1 rounded-lg mb-10 hover:scale-105">
+                            <div class="bg-gray-100 shadow-md rounded-lg px-10 py-3" data-aos="fade-up">
+                                <div class="icon text-center mb-5">
+                                    <i
+                                        class="fas fa-brands fa-js text-yellow-500 text-[40px] bg-white p-5 rounded-full border shadow-md"></i>
+                                </div>
+                                <div class="description">
+                                    <h3 class="text-center font-bold text-[20px]">JAVASCRIPT</h3>
+                                    <p class="text-indent">Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- React -->
+                        <div class="relative skill-card overflow-hidden p-1 rounded-lg mb-10 hover:scale-105">
+                            <div class="bg-gray-100 shadow-md rounded-lg px-10 py-3" data-aos="fade-up">
+                                <div class="icon text-center mb-5">
+                                    <i
+                                        class="fas fa-brands fa-react text-blue-500 text-[40px] bg-white p-5 rounded-full border shadow-md"></i>
+                                </div>
+                                <div class="description">
+                                    <h3 class="text-center font-bold text-[20px]">REACT</h3>
+                                    <p class="text-indent">Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- CSS3 -->
+                        <div class="relative skill-card overflow-hidden p-1 rounded-lg mb-10 hover:scale-105">
+                            <div class="bg-gray-100 shadow-md rounded-lg px-10 py-3" data-aos="fade-down">
+                                <div class="icon text-center mb-5">
+                                    <i
+                                        class="fas fa-brands fa-css3 text-blue-500 text-[40px] bg-white p-5 rounded-full border shadow-md"></i>
+                                </div>
+                                <div class="description">
+                                    <h3 class="text-center font-bold text-[20px]">CSS3</h3>
+                                    <p class="text-indent">Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- Bootstrap 5 -->
+                        <div class="relative skill-card overflow-hidden p-1 rounded-lg mb-10 hover:scale-105">
+                            <div class="bg-gray-100 shadow-md rounded-lg px-10 py-3" data-aos="fade-down">
+                                <div class="icon text-center mb-5">
+                                    <i
+                                        class="fas fa-brands fa-bootstrap text-blue-500 text-[40px] bg-white p-5 rounded-full border shadow-md"></i>
+                                </div>
+                                <div class="description">
+                                    <h3 class="text-center font-bold text-[20px]">BOOTSTRAP 5</h3>
+                                    <p class="text-indent">Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Back-End Skills -->
+        <section class="text-center py-10">
+            <h2 class="text-[30px] font-bold">
+                Back-End Skill <i class="fas fa-solid fa-laptop-code hover:text-blue-500 cursor-pointer"></i>
+            </h2>
+            <p class="text-neutral-600">
+                Here's the list of some my favourite <span class="text-blue-500">Back-end</span> Languages
+            </p>
+        
+            <div class="flex flex-wrap gap-5 justify-evenly mt-10">
+                <!-- PHP -->
+                <div class="relative skill-card overflow-hidden p-1 rounded-lg mb-10 hover:scale-105">
+                    <div class="bg-gray-100 shadow-md rounded-lg px-10 py-3" data-aos="fade-up">
+                        <div class="icon text-center mb-5">
+                            <i
+                                class="fas fa-brands fa-php text-orange-500 text-[40px] bg-white p-5 rounded-full border shadow-md"></i>
+                        </div>
+                        <div class="description">
+                            <h3 class="text-center font-bold text-[20px]">PHP</h3>
+                            <p class="text-indent">Back-End language that is used for Back-End Logic</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- MySQL -->
+                <div class="relative skill-card overflow-hidden p-1 rounded-lg mb-10 hover:scale-105">
+                    <div class="bg-gray-100 shadow-md rounded-lg px-10 py-3" data-aos="fade-up">
+                        <div class="icon text-center mb-5">
+                            <i
+                                class="fas fa-solid fa-database text-yellow-500 text-[40px] bg-white p-5 rounded-full border shadow-md"></i>
+                        </div>
+                        <div class="description">
+                            <h3 class="text-center font-bold text-[20px]">MY-SQL</h3>
+                            <p class="text-indent">Database used to store data.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- <div class="p-[100px]"></div> -->
     <script src="./javascript/main.js"></script>
 </body>
 
