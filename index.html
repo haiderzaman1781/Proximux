@@ -7,69 +7,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="./assest/css/style.css">
 
 
-    <title>Document</title>
-    <style>
-        *{
-            scroll-behavior: smooth;
-        }
-        body{
-            overflow-x: hidden;
-            padding: 0%;
-            margin: 0%;
-            background-image: url(/assest/image/bck.jpg);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            backdrop-filter: blur(8px);
-
-        }
-        .links{
-            backdrop-filter: blur(10px);
-        }
-        .active{
-            background-color: #558df4;
-        }
-    </style>
+    <title>Proximux</title>
 </head>
 
 <body>
     <!-- NAVBAR -->
-    <nav class="text-white lg:w-[78%]  sticky top-0  z-10 "
-    id="main-nav"
-    >
-        <div class="flex justify-center lg:justify-start">
+    <nav class="text-white lg:w-[78%]  sticky top-0  z-10 md:w-[100%] " id="main-nav">
+        <div class="flex md:justify-around items-center px-5 lg:p-0 ">
             <!-- Logo -->
-            <div class="text-2xl font-bold w-1/4 text-center bg-black py-3 rounded-br-2xl ">
+            <div class="text-2xl font-bold w-1/4 text-center  py-3 rounded-br-2xl " id="nav-logo">
                 BUILD<span class="text-purple-500">→</span>
             </div>
 
             <!-- Navbar Links (Desktop) -->
             <div class="links rounded-xl items-center rounded-bl-2xl  w-3/4 flex justify-end pr-10 ">
-            <ul class="hidden md:flex space-x-10 py-2  rounded-xl  lg:bg-gray-400">
-                <li><a href="#home" class="nav-links py-2 px-3 rounded-lg">Home</a></li>
-                <li><a href="#services" class="nav-links py-2 px-3 rounded-lg">Services</a></li>
-                <li><a href="#about" class="nav-links py-2 px-3 rounded-lg">About</a></li>
-                <li><a href="#contact" class="nav-links py-2 px-3 rounded-lg">Contact</a></li>
-            </ul>
+                <ul class="hidden md:flex space-x-10 py-2  rounded-xl " id="nav-Links">
+                    <li><a href="#home" class="nav-links py-2 px-3 rounded-lg">Home</a></li>
+                    <li class="relative group">
+                        <a href="#" class="nav-links py-2 px-3 rounded-lg">
+                            Service <i class="fa-solid fa-sort-down"></i>
+                        </a>
+                        <div
+                            class="absolute left-0 z-10 p-4 md:w-[230px] bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300">
+                            <div class="mt-3 pb-3">
+                                <a href="#" class="underline text-neutral-800">
+                                    <span class="font-bold text-[15px]">Company Incorporation</span>
+                                </a>
+                            </div>
+                            <div class="mt-3 pb-3">
+                                <a href="#" class="underline text-neutral-800">
+                                    <span class="font-bold text-[15px]">Accounting</span>
+                                </a>
+                            </div>
+                            <div class="mt-3 pb-3">
+                                <a href="#" class="underline text-neutral-800">
+                                    <span class="font-bold text-[15px]">Businesses & Contractors</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#about" class="nav-links py-2 px-3 rounded-lg">About</a></li>
+                    <li><a href="#contact" class="nav-links py-2 px-3 rounded-lg">Contact</a></li>
+                </ul>
             </div>
 
             <!-- Hamburger Menu (Mobile) -->
             <div class="md:hidden">
-                <button id="menu-toggle" class="text-xl focus:outline-none">
+                <button id="menu-toggle" class="text-xl focus:outline-none" >
                     ☰
                 </button>
             </div>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden bg-black md:hidden">
+        <div id="mobile-menu" class="hidden  h-[200px] md:hidden ">
             <ul class="flex flex-col items-center space-y-4 py-4">
                 <li><a href="#home" class="nav-links hover:text-purple-500">Home</a></li>
-                <li><a href="#services" class="nav-links hover:text-purple-500">Services</a></li>
+                <li class="relative group">
+                    <a href="#" class="nav-links py-2 px-3 rounded-lg">
+                        Service <i class="fa-solid fa-sort-down"></i>
+                    </a>
+                    <div
+                        class="absolute left-0 z-10 p-4 w-[300px] bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-300">
+                        <div class="mt-3 pb-3">
+                            <a href="#" class="underline text-neutral-800">
+                                <span class="font-bold text-[15px]">Company Incorporation</span>
+                            </a>
+                        </div>
+                        <div class="mt-3 pb-3">
+                            <a href="#" class="underline text-neutral-800">
+                                <span class="font-bold text-[15px]">Accounting</span>
+                            </a>
+                        </div>
+                        <div class="mt-3 pb-3">
+                            <a href="#" class="underline text-neutral-800">
+                                <span class="font-bold text-[15px]">Businesses & Contractors</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
                 <li><a href="#about" class="nav-links hover:text-purple-500">About</a></li>
                 <li><a href="#contact" class="nav-links hover:text-purple-500">Contact</a></li>
             </ul>
@@ -77,7 +97,7 @@
     </nav>
 
     <!-- Hero -->
-    <div class=" text-white min-h-screen flex items-center justify-center">
+    <div class="animate text-white min-h-screen flex items-center justify-center">
         <div class="container mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-10">
             <!-- Left Section -->
             <div class="space-y-6">
@@ -99,14 +119,16 @@
             </div>
 
             <!-- Right Section -->
-            
+
         </div>
     </div>
-    
 
 
-    <div class="lg:absolute  flex items-center p-5  lg:rounded-2xl justify-center lg:justify-end lg:top-10 lg:right-[-20px]">
-        <div class="rounded-lg bg-gradient-to-b to-blue-500 from-purple-600 lg:w-[300px] lg:h-[600px] p-6 shadow-xl rounded-xl">
+
+    <div
+        class="animate lg:absolute  flex items-center p-5  lg:rounded-2xl justify-center lg:justify-end lg:top-10 lg:right-[-20px]">
+        <div
+            class="rounded-lg bg-gradient-to-b to-blue-500 from-purple-600 lg:w-[300px] lg:h-[600px] p-6 shadow-xl rounded-xl">
             <div class="rounded-full bg-purple-500 w-20 h-20 flex items-center justify-center mx-auto mb-6">
             </div>
             <div class="text-center">
@@ -120,24 +142,25 @@
             </button>
         </div>
     </div>
-     
+
 
 
     <div>
         <section class="text-center py-10">
-            <h1 class="text-[35px] font-bold hover:text-[#94a883] cursor-pointer font-playwrite">Skill's</h1>
+            <h1 class="text-[35px] font-bold cursor-pointer font-playwrite text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">Skill's</h1>
             <div class="w-full flex justify-center py-5 text-neutral-500">
                 <div class="w-[80%]">
-                    <h2 class="text-[30px] font-bold">
-                        Front-End Skill <i class="fas fa-solid fa-laptop-code hover:text-blue-500 cursor-pointer"></i>
+                    <h2 class="text-[30px] font-bold text-white">
+                        Front-End Skill
+                        <i class="fas fa-solid text-white fa-laptop-code hover:text-blue-500 cursor-pointer"></i>
                     </h2>
-                    <p class="text-neutral-600">
+                    <p class="text-white">
                         Here's the list of some my favourite <span class="text-blue-500">Front-end</span> Languages
                     </p>
-        
+
                     <div class="flex flex-wrap gap-5 justify-evenly mt-10">
                         <!-- HTML5 -->
-                        <div class="relative skill-card overflow-hidden p-1 rounded-lg mb-10 hover:scale-105">
+                        <div class="animate relative skill-card overflow-hidden p-1 rounded-lg mb-10 hover:scale-105">
                             <div class="bg-gray-100 shadow-md rounded-lg px-10 py-3" data-aos="fade-up">
                                 <div class="icon text-center mb-5">
                                     <i
@@ -149,9 +172,9 @@
                                 </div>
                             </div>
                         </div>
-        
+
                         <!-- JavaScript -->
-                        <div class="relative skill-card overflow-hidden p-1 rounded-lg mb-10 hover:scale-105">
+                        <div class="animate relative skill-card overflow-hidden p-1 rounded-lg mb-10 hover:scale-105">
                             <div class="bg-gray-100 shadow-md rounded-lg px-10 py-3" data-aos="fade-up">
                                 <div class="icon text-center mb-5">
                                     <i
@@ -163,9 +186,9 @@
                                 </div>
                             </div>
                         </div>
-        
+
                         <!-- React -->
-                        <div class="relative skill-card overflow-hidden p-1 rounded-lg mb-10 hover:scale-105">
+                        <div class="animate relative skill-card overflow-hidden p-1 rounded-lg mb-10 hover:scale-105">
                             <div class="bg-gray-100 shadow-md rounded-lg px-10 py-3" data-aos="fade-up">
                                 <div class="icon text-center mb-5">
                                     <i
@@ -177,9 +200,9 @@
                                 </div>
                             </div>
                         </div>
-        
+
                         <!-- CSS3 -->
-                        <div class="relative skill-card overflow-hidden p-1 rounded-lg mb-10 hover:scale-105">
+                        <div class="animate relative skill-card overflow-hidden p-1 rounded-lg mb-10 hover:scale-105">
                             <div class="bg-gray-100 shadow-md rounded-lg px-10 py-3" data-aos="fade-down">
                                 <div class="icon text-center mb-5">
                                     <i
@@ -191,9 +214,9 @@
                                 </div>
                             </div>
                         </div>
-        
+
                         <!-- Bootstrap 5 -->
-                        <div class="relative skill-card overflow-hidden p-1 rounded-lg mb-10 hover:scale-105">
+                        <div class="animate relative skill-card overflow-hidden p-1 rounded-lg mb-10 hover:scale-105">
                             <div class="bg-gray-100 shadow-md rounded-lg px-10 py-3" data-aos="fade-down">
                                 <div class="icon text-center mb-5">
                                     <i
@@ -209,7 +232,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Back-End Skills -->
         <section class="text-center py-10">
             <h2 class="text-[30px] font-bold">
@@ -218,10 +241,10 @@
             <p class="text-neutral-600">
                 Here's the list of some my favourite <span class="text-blue-500">Back-end</span> Languages
             </p>
-        
+
             <div class="flex flex-wrap gap-5 justify-evenly mt-10">
                 <!-- PHP -->
-                <div class="relative skill-card overflow-hidden p-1 rounded-lg mb-10 hover:scale-105">
+                <div class="animate relative skill-card overflow-hidden p-1 rounded-lg mb-10 hover:scale-105">
                     <div class="bg-gray-100 shadow-md rounded-lg px-10 py-3" data-aos="fade-up">
                         <div class="icon text-center mb-5">
                             <i
@@ -233,9 +256,9 @@
                         </div>
                     </div>
                 </div>
-        
+
                 <!-- MySQL -->
-                <div class="relative skill-card overflow-hidden p-1 rounded-lg mb-10 hover:scale-105">
+                <div class="animate relative skill-card overflow-hidden p-1 rounded-lg mb-10 hover:scale-105">
                     <div class="bg-gray-100 shadow-md rounded-lg px-10 py-3" data-aos="fade-up">
                         <div class="icon text-center mb-5">
                             <i
